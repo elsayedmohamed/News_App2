@@ -1,4 +1,3 @@
-import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,13 +7,11 @@ import 'package:news_app_flutter_course/widgets/article_widget.dart';
 import 'package:news_app_flutter_course/widgets/drawer_widget.dart';
 import 'package:news_app_flutter_course/widgets/spacer.dart';
 import 'package:news_app_flutter_course/widgets/tabs.dart';
-import 'package:news_app_flutter_course/widgets/top_trending_widget.dart';
 
 import '../widgets/loading_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -47,8 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // final themeProvider = Provider.of<ThemeProvider>(context);
     // bool isDarh = themeProvider.getDarkTheme;
-        Size size = Utils(context).getScreenSize;
-
+    Size size = Utils(context).getScreenSize;
 
     final Color color = Utils(context).color;
 
@@ -201,20 +197,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               if (newsType == NewsType.topTrending)
                 SizedBox(
-                  height:size.height*0.5,
-                   child:LoadingWidget(newsType: newsType,)
-                  // Swiper(
-                  //   autoplayDelay: 8000,
-                  //   autoplay: true,
-                  //   layout:SwiperLayout.STACK,
-                  //   itemWidth: size.width*0.8,
-                  //   viewportFraction: 0.9,
-                  //   itemCount: 5,
-                  //   itemBuilder: (context, index) {
-                  //     return const TopTrendingWidget();
-                  //   },
-                  // ),
-                ),
+                    height: size.height * 0.5,
+                    child: LoadingWidget(
+                      newsType: newsType,
+                    )
+                    // Swiper(
+                    //   autoplayDelay: 8000,
+                    //   autoplay: true,
+                    //   layout:SwiperLayout.STACK,
+                    //   itemWidth: size.width*0.8,
+                    //   viewportFraction: 0.9,
+                    //   itemCount: 5,
+                    //   itemBuilder: (context, index) {
+                    //     return const TopTrendingWidget();
+                    //   },
+                    // ),
+                    ),
 
               // newsType == NewsType.topTrending
               //     ? Container()
