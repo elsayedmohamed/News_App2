@@ -25,6 +25,7 @@ class Styles {
             secondary: isDarkTheme ? darkIconsColor : lightIconsColor,
             brightness: isDarkTheme ? Brightness.dark : Brightness.light,
           ),
+          iconTheme: IconThemeData(color: isDarkTheme?darkIconsColor:lightIconsColor),
     );
   }
 }
